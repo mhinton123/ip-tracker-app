@@ -44,7 +44,7 @@ p.target-info {
 /* Header */
 
 header {
-    background-image: url(/assets/header-bg-earth.jpg);
+    background-image: url(/assets/header-bg-earth-cropped.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -104,3 +104,59 @@ div.target-col {
     gap: 8px;
 }
 
+/* Desktop CSS */
+
+@media screen and (min-width: 1028px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    input#searchbar-input {
+        font-size: 1.125rem;
+    }
+
+    h3 {
+        font-size: 0.75rem;
+    }
+
+    p.target-info {
+        font-size: 1.625rem;
+    }
+    
+    header {
+        padding-top: 30px;
+        height: 280px;
+    }
+
+    div.searchbar-wr {
+        max-width: 555px;
+    }
+
+    input#searchbar-input {
+        padding-left: 1.5em;
+    }
+
+    div.target-details-wr {
+        top: 210px;
+        max-width: 1110px;
+        flex-direction: row;
+        /* height: 160px; */
+    }
+
+    div.target-col {
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 0.5em;
+    }
+
+    p.target-info {
+        border-right: 1px solid #cdcdcd;
+        height: 100%;
+        padding-right: 2em;
+    }
+
+    #target-details-col4 > :nth-child(2) {
+        border-right: none;
+    }
+}
