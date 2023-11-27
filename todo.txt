@@ -1,0 +1,21 @@
+# when page originally loads
+    - load users own ip address
+
+# when submit-btn is click
+
+    # check valid ipaddress 
+        - split via '.', should be 4 octects
+            - loop over each octect
+                - check only numbers
+                - length should be between 1 - 3
+        
+        # if invalid
+            - display popup message sayin "Incorrect IPAddress or domain name"
+            - return false
+        
+        # if valid
+            - return true
+
+    # call API's to check location of valid IP Address
+        - get users IP details and render to details div
+        

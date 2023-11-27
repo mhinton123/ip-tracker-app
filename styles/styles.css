@@ -95,6 +95,7 @@ div.target-details-wr {
     background-color: white;
     border-radius: 15px;
     box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
 div.target-col {
@@ -106,7 +107,15 @@ div.target-col {
 
 /* Map */
 
-#map { height: 380px; }
+#main-wr{
+    height: 70.5vh;
+}
+
+#map { 
+    height: 100%;
+    z-index: 1;
+ }
+
 
 /* Desktop CSS */
 
