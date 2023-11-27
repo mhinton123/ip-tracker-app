@@ -107,30 +107,22 @@ async function getIpDetails(ipAddress) {
     
 function renderHeaderDetails(detailsObj) {
     
-    const ipAddress = detailsObj.ip
-    const location = detailsObj.location.city
-    const timezone = detailsObj.location.timezone.substring(1)
-    const isp = detailsObj.isp
-
-    document.getElementById('ip-address').textContent = ipAddress
-    document.getElementById('location').textContent = location
-    document.getElementById('timezone').textContent = `UTC - ${timezone}`
-    document.getElementById('isp').textContent = isp
-
+    document.getElementById('ip-address').textContent = detailsObj.ip
+    document.getElementById('location').textContent = detailsObj.location.city
+    document.getElementById('timezone').textContent = `UTC - ${detailsObj.location.timezone.substring(1)}`
+    document.getElementById('isp').textContent = detailsObj.isp
 
 }
 
 function initializeMap(detailsObj) {
-        const lat = detailsObj.location.lat
-        const long = detailsObj.location.lng
-        map = L.map('map').setView([lat, long], 13);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    const lat = detailsObj.location.lat
+    const long = detailsObj.location.lng
+    map = L.map('map').setView([lat, long], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-
     marker = L.marker([lat, long]).addTo(map);
-
 }
 
 function renderMap(detailsObj) {
@@ -146,6 +138,7 @@ function renderMap(detailsObj) {
 
 }
 
+// Check the response from API call contains all neccessary info
 function checkValidResponse(detailsObj) {
     
     const ipAddress = detailsObj.ip
@@ -162,25 +155,19 @@ function checkValidResponse(detailsObj) {
     }
 }
 
-
-
-
-
-
-  
 // Function to show the popup message
 function showPopup(msg) {
     popupMessage.textContent = msg
-    popupMessage.style.display = 'block';
+    popupMessage.style.display = 'block'
     setTimeout(() => {
-    popupMessage.style.opacity = '1';
-    }, 10);
+    popupMessage.style.opacity = '1'
+    }, 10)
 
     // Hide the popup after 3 seconds
     setTimeout(() => {
-    popupMessage.style.opacity = '0';
+    popupMessage.style.opacity = '0'
     setTimeout(() => {
-        popupMessage.style.display = 'none';
-    }, 300);
-    }, 3000);
+        popupMessage.style.display = 'none'
+    }, 300)
+    }, 3000)
 }

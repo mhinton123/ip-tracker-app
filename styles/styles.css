@@ -7,6 +7,9 @@ body, input {
     font-family: 'Rubik', sans-serif;
 }
 
+body {
+    background-color: #ececec;
+}
 /* Typography */
 
 h1 {
@@ -107,6 +110,7 @@ div.target-col {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 8px;
 }
 
