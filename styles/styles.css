@@ -67,6 +67,10 @@ input#searchbar-input {
     border: none;
 }
 
+input#searchbar-input:focus {
+    outline: none;
+}
+
 button#search-btn {
     width: 58px;
     display: flex;
@@ -75,6 +79,7 @@ button#search-btn {
     border-radius: 0 15px 15px 0;
     border: none;
     background-color: rgb(49, 49, 49);
+    cursor: pointer;
 }
 
 img.search-btn-icon {
@@ -139,7 +144,7 @@ div.target-col {
     
     header {
         padding-top: 30px;
-        height: 280px;
+        height: 270px;
     }
 
     div.searchbar-wr {
