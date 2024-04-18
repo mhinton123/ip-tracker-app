@@ -1,4 +1,4 @@
-const apiKey = 'at_KXKVqPfFGEpmHMNTP6wN1InnaW5bF'
+const apiKey = 'at_ezcZH2Sl7HAyuSEpUPsb9VAoldhHj'
 const searchBtn = document.getElementById('search-btn')
 const inputField = document.getElementById('searchbar-input')
 const popupMessage = document.getElementById('popupMessage');
